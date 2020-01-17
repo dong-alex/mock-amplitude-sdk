@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/api/AmplitudeAPI.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/api</a> AmplitudeAPI.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { createContext } from "react";
+import useAmplitudeSDK from "../hooks/useAmplitudeSDK";
+import generateUUID from "../utils/generateUUID";
+&nbsp;
+/**
+ * Creates a global context within any target application that will allow usage of the mock SDK
+ */
+export const AmplitudeContext = createContext();
+&nbsp;
+/**
+ * Provider for the amplitude context, this is the access point to all of the functionality that you can
+ * use with the mock amplitude SDK. Any adjustments to the SDK and functionality itself will be managed through here.
+ * The target application won't be responsible at all for managing this functionality as this will be a seperate library
+ * @param {Object} props
+ */
+export const AmplitudeProvider = props =&gt; {
+  const { apiKey, events, initializeAPIKey, logEvent } = useAmplitudeSDK();
+&nbsp;
+  const handleAPIKeyCreate = apiKey =&gt; {
+    initializeAPIKey(apiKey);
+  };
+&nbsp;
+  const handleLogEvent = (eventName, eventProperties) =&gt; {
+    logEvent(eventName, eventProperties);
+  };
+&nbsp;
+  const getEvents = () =&gt; {
+    return events;
+  };
+&nbsp;
+  const generateAPIKey = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    return generateUUID();</span>
+  };
+&nbsp;
+  return (
+    &lt;AmplitudeContext.Provider
+      value={{
+        apiKey,
+        handleAPIKeyCreate,
+        handleLogEvent,
+        getEvents,
+        generateAPIKey
+      }}
+    &gt;
+      {props.children}
+    &lt;/AmplitudeContext.Provider&gt;
+  );
+};
+&nbsp;
+/**
+ * Utility wrapper function that will wrap any component in a target application to be given the amplitude functionality for logging events
+ * Afterwards, the application will only have to pass in the event name and properties after authentication via the api key which is validated
+ * to be true without any sort of data storage for managing valid keys.
+ * @param {JSXElement} Component
+ */
+export const withAmplitudeContext = Component =&gt; {
+  return function WrapperComponent(props) {
+    return (
+      &lt;AmplitudeContext.Consumer&gt;
+        {state =&gt; &lt;Component {...props} context={state} /&gt;}
+      &lt;/AmplitudeContext.Consumer&gt;
+    );
+  };
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 16 2020 18:29:34 GMT-0700 (Mountain Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

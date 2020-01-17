@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/hooks/useAmplitudeSDK.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/hooks</a> useAmplitudeSDK.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">61x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useEffect, useState } from "react";
+import Event from "./events/Event";
+&nbsp;
+const FLUSH_INTERVAL = 60 * 1000;
+const OMITTED_EVENT_THRESHOLD = 2;
+&nbsp;
+/**
+ * NOTE - localStorage is used for caching and if there was instance of a backend used that would store the flushed events,
+ * an API would also be used to handle API validation and generation. So far, there would be no reliable way of storing API keys
+ * for each customer. Therefore, any API key string can be acted as a validated key for the mock SDK
+ */
+&nbsp;
+/**
+ * Creates the API for the mock amplitude SDK. This custom hook will only live within the amplitude provider.
+ * Applications will utilize the providers and their functions which will track the events when logEvents is called anywhere
+ * in the application
+ */
+const useAmplitudeSDK = () =&gt; {
+  /**
+   * automated timer used to flush the events at a set interval. Given a real backend server, these events would be flushed out into
+   * the database and stored there
+   */
+  const eventTimer = () =&gt; {
+    return setInterval(() =&gt; {
+      flushEvents();
+    }, FLUSH_INTERVAL);
+  };
+&nbsp;
+  /**
+   * initializes the SDK's state and the associated user's information that will be used for logging events
+   */
+  const [events, setEvents] = useState([]);
+  const [flush, setFlush] = useState(false);
+  const [apiKey, setApiKey] = useState("");
+  const [timer, setTimer] = useState(null);
+&nbsp;
+  /**
+   * restores any past events that were previously queued up when the application was terminated. The events
+   * were stored into the local storage as a cached version
+   */
+  useEffect(() =&gt; {
+    let loadEvents = localStorage.getItem("amplitude_events");
+    if (loadEvents !== null) {
+      serializeEvents(JSON.parse(loadEvents));
+    }
+  }, []);
+&nbsp;
+  /**
+   * initialization with an api key that gets validated will issue the amplitude SDK to start recording
+   * events and flushing them out based on a time interval
+   */
+  useEffect(() =&gt; {
+    if (apiKey) {
+      setTimer(eventTimer());
+    } else {
+      clearInterval(timer);
+    }
+  }, [apiKey]);
+&nbsp;
+  /**
+   * effect that causes the events to be flushed out within the SDK. This will also trigger the local storage to remove
+   * the cached version.
+   */
+  useEffect(() =&gt; {
+    if (flush &amp;&amp; events.length != 0) {
+      displayFlushedEvents();
+      setFlush(false);
+      localStorage.removeItem("amplitude_events");
+      setEvents([]);
+&nbsp;
+      // resets the interval if flushed - so we do not have an extra flush event at max capacity and then time exceeds
+      clearInterval(timer);
+      setTimer(eventTimer());
+    }
+  }, [flush]);
+&nbsp;
+  /**
+   * monitors the queue to determine if we have reached the limit of our queue, where we will then force the queue to flush
+   * out the events that were stored inside.
+   */
+  useEffect(() =&gt; {
+    if (events.length == 50) {
+      setFlush(true);
+    }
+  }, [events]);
+&nbsp;
+  const initializeAPIKey = key =&gt; {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (checkValidKey(key)) {
+      setApiKey(key);
+    }
+  };
+&nbsp;
+  /**
+   * Given an input of an event name and event properties, creates an Event object that will be queued up and flushed
+   * out every minute
+   * @param {String} eventName
+   * @param {Object} eventProperties
+   */
+  const logEvent = (eventName, eventProperties) =&gt; {
+    const event = new Event(eventName, eventProperties);
+    const newEvents = [...events, event];
+    setEvents(newEvents);
+    localStorage.setItem("amplitude_events", JSON.stringify(newEvents));
+  };
+&nbsp;
+  /**
+   * triggers an effect that causes the events queued up to be flushed out
+   */
+  const flushEvents = () =&gt; {
+    setFlush(true);
+  };
+&nbsp;
+  /**
+   * loaded events from the local sotrage are parsed into regular objects, this function ensures they are reinitialized
+   * back into proper Event objects
+   * @param {Object} loadEvents
+   */
+  const serializeEvents = loadEvents =&gt; {
+    const eventObjects = [];
+    loadEvents.forEach(eventObject =&gt; {
+      eventObjects.push(
+        new Event(eventObject.event_name, eventObject.event_properties)
+      );
+    });
+    setEvents([...eventObjects]);
+  };
+&nbsp;
+  /**
+   * utility function to help print out the flushed events in the proper format. There will be 2 formats:
+   * let OET be the OMITTED_EVENT_THRESHOLD (default to 2)
+   * 1. Flush event with only OET events queued
+   * 2. Flush event with more than OEt events queued
+   */
+  const displayFlushedEvents = () =&gt; {
+    console.log(`${events.length.toString()} events are flushed`);
+&nbsp;
+    if (events.length &lt;= OMITTED_EVENT_THRESHOLD) {
+      events.forEach((event, index) =&gt; {
+        console.log(`Event ${(index + 1).toString()}`);
+        console.log(event);
+      });
+    } else {
+      const firstEvent = events[0];
+      const lastEvent = events[events.length - 1];
+&nbsp;
+      console.log("Event 1");
+      console.log(firstEvent);
+&nbsp;
+      console.log(
+        `${(
+          events.length - OMITTED_EVENT_THRESHOLD
+        ).toString()} events were omitted to print ......`
+      );
+&nbsp;
+      console.log(`Event ${events.length.toString()}`);
+      console.log(lastEvent);
+    }
+    setEvents([]);
+  };
+&nbsp;
+  /**
+   * helper function to determine if an API key generated will be unique, and valid for use. Without some storage system in the backend server, we can't
+   * store important credentials properly
+   * @param {String} key
+   */
+  const checkValidKey = key =&gt; {
+    return true;
+  };
+  return {
+    apiKey,
+    events,
+    initializeAPIKey,
+    logEvent
+  };
+};
+&nbsp;
+export default useAmplitudeSDK;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 16 2020 18:29:34 GMT-0700 (Mountain Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

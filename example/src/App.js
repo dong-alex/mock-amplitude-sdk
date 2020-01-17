@@ -1,13 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import ExamplePage from "./components/ExamplePage";
+import { AmplitudeProvider, withAmplitudeContext } from "mock-amplitude-sdk";
 
-import ExampleComponent from 'mock-amplitude-sdk'
-
-export default class App extends Component {
-  render () {
+class App extends Component {
+  render() {
     return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
+      <AmplitudeProvider>
+        <ExamplePage />
+      </AmplitudeProvider>
+    );
   }
 }
+
+export default withAmplitudeContext(App);

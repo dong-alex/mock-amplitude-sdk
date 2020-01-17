@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AmplitudeProvider Test should render a component with AmplitudeProvider information 1`] = `
+<div>
+  <div
+    data-testid="amplitude-ui"
+  >
+    <label>
+      I am an example page
+    </label>
+    <input
+      readonly=""
+      value=""
+    />
+    <button
+      data-testid="generate-api-button"
+    >
+      Generate API Key
+    </button>
+    <button
+      data-testid="session-button"
+    >
+      Start Amplitude Session
+    </button>
+    <div
+      data-testid="no-api-key-message"
+    >
+      There is no api-key associated yet
+    </div>
+    <button
+      data-testid="event-button-properties"
+    >
+      Log Event with properties
+    </button>
+    <button
+      data-testid="event-button"
+    >
+      Log Event
+    </button>
+  </div>
+</div>
+`;
