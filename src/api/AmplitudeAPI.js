@@ -18,14 +18,11 @@ export const AmplitudeProvider = props => {
 
   const handleAPIKeyCreate = apiKey => {
     initializeAPIKey(apiKey);
+    return true;
   };
 
   const handleLogEvent = (eventName, eventProperties) => {
     logEvent(eventName, eventProperties);
-  };
-
-  const getEvents = () => {
-    return events;
   };
 
   const generateAPIKey = () => {
@@ -42,7 +39,7 @@ export const AmplitudeProvider = props => {
         apiKey,
         handleAPIKeyCreate,
         handleLogEvent,
-        getEvents,
+        events,
         generateAPIKey,
         flushEvents
       }}

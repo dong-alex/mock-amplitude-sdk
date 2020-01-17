@@ -9,11 +9,10 @@ import generateUUID from "../utils/generateUUID";
 const TestComponent = props => {
   const {
     apiKey,
-    getEvents,
+    events,
     handleAPIKeyCreate,
     handleLogEvent
   } = props.context;
-  const events = getEvents();
 
   const [currentKey, setCurrentKey] = useState("");
 
