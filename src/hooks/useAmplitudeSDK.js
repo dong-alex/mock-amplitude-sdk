@@ -33,6 +33,7 @@ const useAmplitudeSDK = () => {
   const [flush, setFlush] = useState(false);
   const [apiKey, setApiKey] = useState("");
   const [timer, setTimer] = useState(null);
+  const [sessionStarted, setSessionStarted] = useState(false);
 
   /**
    * restores any past events that were previously queued up when the application was terminated. The events
@@ -50,12 +51,13 @@ const useAmplitudeSDK = () => {
    * events and flushing them out based on a time interval
    */
   useEffect(() => {
-    if (apiKey) {
+    if (sessionStarted) {
       setTimer(eventTimer());
     } else {
       clearInterval(timer);
+      setTimer(null);
     }
-  }, [apiKey]);
+  }, [sessionStarted]);
 
   /**
    * effect that causes the events to be flushed out within the SDK. This will also trigger the local storage to remove
@@ -64,13 +66,13 @@ const useAmplitudeSDK = () => {
   useEffect(() => {
     if (flush && events.length != 0) {
       displayFlushedEvents();
-      setFlush(false);
       localStorage.removeItem("amplitude_events");
       setEvents([]);
 
       // resets the interval if flushed - so we do not have an extra flush event at max capacity and then time exceeds
       clearInterval(timer);
       setTimer(eventTimer());
+      setFlush(false);
     }
   }, [flush]);
 
@@ -87,6 +89,7 @@ const useAmplitudeSDK = () => {
   const initializeAPIKey = key => {
     if (checkValidKey(key)) {
       setApiKey(key);
+      setSessionStarted(true);
     }
   };
 
@@ -97,10 +100,12 @@ const useAmplitudeSDK = () => {
    * @param {Object} eventProperties
    */
   const logEvent = (eventName, eventProperties) => {
-    const event = new Event(eventName, eventProperties);
-    const newEvents = [...events, event];
-    setEvents(newEvents);
-    localStorage.setItem("amplitude_events", JSON.stringify(newEvents));
+    if (sessionStarted) {
+      const event = new Event(eventName, eventProperties);
+      const newEvents = [...events, event];
+      setEvents(newEvents);
+      localStorage.setItem("amplitude_events", JSON.stringify(newEvents));
+    }
   };
 
   /**
@@ -172,10 +177,12 @@ const useAmplitudeSDK = () => {
    */
   const closeSession = () => {
     setApiKey("");
+    setSessionStarted(false);
   };
 
   return {
     apiKey,
+    sessionStarted,
     closeSession,
     events,
     initializeAPIKey,

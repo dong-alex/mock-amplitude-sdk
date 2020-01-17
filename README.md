@@ -108,7 +108,11 @@ The following methods or variables can be used within the context of any compone
 
 ### handleAPIKeyCreate(api_key)
 
-Initializes the amplitude instance to refer to the api_key. Without a backend instance supporting this mock library, it will be automatically validated to be true and will be lost on the closing of the application. A new api key can always be generated and used later on.
+Initializes the amplitude instance to refer to the api_key. Without a backend instance supporting this mock library, it will be automatically validated to be true and will be lost on the closing of the application. A new api key can always be generated and used later on. Returns true when session starts
+
+### handleEndSession()
+
+Ends the current amplitude session and removes the api key that was previously in use. If there was no api key to begin with, it will not do anything.
 
 ### handleLogEvent(eventName, eventProperties)
 

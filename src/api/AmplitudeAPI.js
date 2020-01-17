@@ -14,7 +14,15 @@ export const AmplitudeContext = createContext();
  * @param {Object} props
  */
 export const AmplitudeProvider = props => {
-  const { apiKey, events, flushAllEvents, initializeAPIKey, closeSession, logEvent } = useAmplitudeSDK();
+  const {
+    apiKey,
+    sessionStarted,
+    events,
+    flushAllEvents,
+    initializeAPIKey,
+    closeSession,
+    logEvent
+  } = useAmplitudeSDK();
 
   const handleAPIKeyCreate = apiKey => {
     initializeAPIKey(apiKey);
@@ -35,18 +43,19 @@ export const AmplitudeProvider = props => {
 
   const flushEvents = () => {
     flushAllEvents();
-  }
+  };
 
   return (
     <AmplitudeContext.Provider
       value={{
         apiKey,
+        events,
+        flushEvents,
+        generateAPIKey,
         handleAPIKeyCreate,
         handleLogEvent,
         handleEndSession,
-        events,
-        generateAPIKey,
-        flushEvents
+        sessionStarted
       }}
     >
       {props.children}
