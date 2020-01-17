@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1579224574260" clover="3.2.0">
-  <project timestamp="1579224574260" name="All files">
-    <metrics statements="114" coveredstatements="113" conditionals="24" coveredconditionals="23" methods="41" coveredmethods="40" elements="179" coveredelements="176" complexity="0" loc="114" ncloc="114" packages="6" files="7" classes="7">
+<coverage generated="1579235251328" clover="3.2.0">
+  <project timestamp="1579235251328" name="All files">
+    <metrics statements="118" coveredstatements="114" conditionals="24" coveredconditionals="23" methods="43" coveredmethods="39" elements="185" coveredelements="176" complexity="0" loc="118" ncloc="118" packages="6" files="7" classes="7">
       <package name="src">
         <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
         <file name="index.js" path="/Users/donguofa/projects/mock-amplitude-sdk/src/index.js">
@@ -19,31 +19,34 @@
         </file>
       </package>
       <package name="src.api">
-        <metrics statements="16" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="7"/>
+        <metrics statements="19" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="6"/>
         <file name="AmplitudeAPI.js" path="/Users/donguofa/projects/mock-amplitude-sdk/src/api/AmplitudeAPI.js">
-          <metrics statements="16" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="7"/>
+          <metrics statements="19" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="6"/>
           <line num="8" count="1" type="stmt"/>
           <line num="16" count="1" type="stmt"/>
           <line num="17" count="69" type="stmt"/>
           <line num="19" count="69" type="stmt"/>
           <line num="20" count="3" type="stmt"/>
-          <line num="23" count="69" type="stmt"/>
-          <line num="24" count="52" type="stmt"/>
-          <line num="27" count="69" type="stmt"/>
-          <line num="28" count="72" type="stmt"/>
-          <line num="31" count="69" type="stmt"/>
-          <line num="32" count="0" type="stmt"/>
-          <line num="35" count="69" type="stmt"/>
-          <line num="56" count="1" type="stmt"/>
-          <line num="57" count="1" type="stmt"/>
-          <line num="58" count="5" type="stmt"/>
-          <line num="60" count="69" type="stmt"/>
+          <line num="21" count="3" type="stmt"/>
+          <line num="24" count="69" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="28" count="69" type="stmt"/>
+          <line num="29" count="52" type="stmt"/>
+          <line num="32" count="69" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="36" count="69" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="40" count="69" type="stmt"/>
+          <line num="63" count="1" type="stmt"/>
+          <line num="64" count="1" type="stmt"/>
+          <line num="65" count="5" type="stmt"/>
+          <line num="67" count="69" type="stmt"/>
         </file>
       </package>
       <package name="src.hooks">
-        <metrics statements="61" coveredstatements="61" conditionals="14" coveredconditionals="13" methods="15" coveredmethods="15"/>
+        <metrics statements="63" coveredstatements="62" conditionals="14" coveredconditionals="13" methods="16" coveredmethods="15"/>
         <file name="useAmplitudeSDK.js" path="/Users/donguofa/projects/mock-amplitude-sdk/src/hooks/useAmplitudeSDK.js">
-          <metrics statements="61" coveredstatements="61" conditionals="14" coveredconditionals="13" methods="15" coveredmethods="15"/>
+          <metrics statements="63" coveredstatements="62" conditionals="14" coveredconditionals="13" methods="16" coveredmethods="15"/>
           <line num="4" count="1" type="stmt"/>
           <line num="5" count="1" type="stmt"/>
           <line num="18" count="1" type="stmt"/>
@@ -104,7 +107,9 @@
           <line num="158" count="2" type="stmt"/>
           <line num="166" count="69" type="stmt"/>
           <line num="167" count="3" type="stmt"/>
-          <line num="169" count="69" type="stmt"/>
+          <line num="173" count="69" type="stmt"/>
+          <line num="174" count="0" type="stmt"/>
+          <line num="177" count="69" type="stmt"/>
         </file>
       </package>
       <package name="src.hooks.events">
@@ -122,25 +127,24 @@
         </file>
       </package>
       <package name="src.tests">
-        <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
+        <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
         <file name="TestComponent.js" path="/Users/donguofa/projects/mock-amplitude-sdk/src/tests/TestComponent.js">
-          <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
+          <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
           <line num="9" count="1" type="stmt"/>
           <line num="15" count="72" type="stmt"/>
-          <line num="16" count="72" type="stmt"/>
-          <line num="18" count="72" type="stmt"/>
-          <line num="20" count="72" type="stmt"/>
-          <line num="21" count="3" type="stmt"/>
-          <line num="24" count="72" type="stmt"/>
-          <line num="25" count="1" type="stmt"/>
-          <line num="28" count="72" type="stmt"/>
-          <line num="29" count="51" type="stmt"/>
-          <line num="32" count="72" type="stmt"/>
+          <line num="17" count="72" type="stmt"/>
+          <line num="19" count="72" type="stmt"/>
+          <line num="20" count="3" type="stmt"/>
+          <line num="23" count="72" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="27" count="72" type="stmt"/>
+          <line num="28" count="51" type="stmt"/>
+          <line num="31" count="72" type="stmt"/>
+          <line num="32" count="3" type="stmt"/>
           <line num="33" count="3" type="stmt"/>
-          <line num="34" count="3" type="stmt"/>
-          <line num="37" count="72" type="stmt"/>
+          <line num="36" count="72" type="stmt"/>
+          <line num="63" count="1340" type="stmt"/>
           <line num="64" count="1340" type="stmt"/>
-          <line num="65" count="1340" type="stmt"/>
         </file>
       </package>
       <package name="src.utils">

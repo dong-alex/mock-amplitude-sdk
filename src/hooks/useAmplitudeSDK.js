@@ -166,8 +166,17 @@ const useAmplitudeSDK = () => {
   const checkValidKey = key => {
     return true;
   };
+
+  /**
+   * ends the current amplitude session. Any leftover events will have been saved into the localStorage for use in the future when the session begins again
+   */
+  const closeSession = () => {
+    setApiKey("");
+  };
+
   return {
     apiKey,
+    closeSession,
     events,
     initializeAPIKey,
     logEvent,

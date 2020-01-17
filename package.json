@@ -1,6 +1,6 @@
 {
   "name": "mock-amplitude-sdk",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Amplitude event manager",
   "author": "dong-alex",
   "license": "MIT",
@@ -9,7 +9,7 @@
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "engines": {
-    "node": ">=8",
+    "node": ">=10",
     "npm": ">=5"
   },
   "scripts": {
