@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ExamplePage from "./components/ExamplePage";
-import { AmplitudeProvider, withAmplitudeContext } from "mock-amplitude-sdk";
+import { AmplitudeProvider } from "mock-amplitude-sdk";
 
 class App extends Component {
   render() {
@@ -12,4 +12,4 @@ class App extends Component {
   }
 }
 
-export default withAmplitudeContext(App);
+export default App;

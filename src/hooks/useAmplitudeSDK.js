@@ -22,7 +22,7 @@ const useAmplitudeSDK = () => {
    */
   const eventTimer = () => {
     return setInterval(() => {
-      flushEvents();
+      flushAllEvents();
     }, FLUSH_INTERVAL);
   };
 
@@ -106,7 +106,7 @@ const useAmplitudeSDK = () => {
   /**
    * triggers an effect that causes the events queued up to be flushed out
    */
-  const flushEvents = () => {
+  const flushAllEvents = () => {
     setFlush(true);
   };
 
@@ -170,7 +170,8 @@ const useAmplitudeSDK = () => {
     apiKey,
     events,
     initializeAPIKey,
-    logEvent
+    logEvent,
+    flushAllEvents
   };
 };
 
